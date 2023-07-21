@@ -1,0 +1,51 @@
+.header{
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.header-style{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+.header .menu-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header .menu-bar .menu {
+    position: relative;
+    height: 10px;
+    width: 60px;
+    cursor: pointer;
+    text-align: right;
+    direction: rtl;
+}
+.header .menu-bar .menu span{
+    position: absolute;
+    height: 2px;
+    background: #ffffff;
+    display: inline-block;
+}
+.header .menu span:nth-child(1){
+    top:0;
+    width: 22px;
+}
+.header .menu span:nth-child(2){
+    top: 7px;
+    width: 28px;
+}
+.header .menu span:nth-child(3){
+    top: 14px;
+    width: 18px;
+}
+.header .menu-bar img {
+    margin-left: 30px;
+}

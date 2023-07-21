@@ -1,0 +1,38 @@
+.best-movie{
+    background-image: url('/public/assets/images/woman.jpg');
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    height: 70vh;
+    min-height: 400px;
+    background-color: #000;
+}
+.best-movie::after{
+    position: absolute;
+    content: "";
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #00000085 0%,#141414 100%);
+    opacity: 0.5;
+}
+.best-movie-text-wrapper{
+    width: 50%;
+    z-index: 2;
+    position: relative;
+    padding-top: 150px;
+    padding-right: 80px;
+}
+.best-movie-text-wrapper h1 {
+    font-size: 3.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.best-movie-text-wrapper p{
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 25px;
+}

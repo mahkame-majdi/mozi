@@ -1,0 +1,32 @@
+.watch {
+    background-color: #1D1D1D;
+}
+.watch .watch-movie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+}
+.watch .watch-movie .macbook{
+    width: 600px;
+}
+.watch .watch-movie .macbook img{
+    width: 100%;
+}
+.watch .watch-movie .description{
+    width: 500px;
+}
+.watch .watch-movie .description h1{
+    margin-bottom: 20px;
+    font-size: 3.4rem;
+    font-weight: bold;
+}
+.watch .watch-movie .description p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+.watch .watch-movie img{
+    width: 100%;
+}

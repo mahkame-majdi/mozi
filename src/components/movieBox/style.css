@@ -1,0 +1,15 @@
+.movie-list ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* padding: 10px; */
+}
+.movie-list ul li{
+    width: 20%;
+    padding: 10px;
+}
+.movie-list ul li img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}

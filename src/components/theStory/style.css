@@ -1,0 +1,66 @@
+.story-box {
+    text-align: center;
+    background: #141414;
+}
+.story-box-wraper {
+    padding: 0 50px;
+}
+.story-box h5 {
+    color: #EEB500;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.story-box h1 {
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+.story-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 23px;
+    text-align: left;
+}
+.story-box ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.story-box ul li {
+    width: 25%;
+}
+.story-box ul h3 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+.story-box ul h6 {
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 8;
+    inherits: false;
+}
+.story-box ul h3:nth-child(1) {
+    animation: counter 3s 1 normal linear;
+    counter-reset: num var(--num);
+    font: normal 17px;
+}
+.story-box ul h3:nth-child(1):after {
+    content: counter(num);
+}
+@keyframes counter {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 8;
+    }
+}

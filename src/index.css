@@ -1,13 +1,162 @@
+
+
+@font-face {
+  font-family: 'Mukta Mahee Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Mukta Mahee Regular'), url('/public/assets/fonts/mukta/MuktaMahee-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Mukta Mahee ExtraLight';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Mukta Mahee ExtraLight'), url('/public/assets/fonts/mukta/MuktaMahee-ExtraLight.woff') format('woff');
+}
+@font-face {
+  font-family: 'Mukta Mahee Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Mukta Mahee Light'), url('/public/assets/fonts/mukta/MuktaMahee-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Mukta Mahee Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Mukta Mahee Medium'), url('/public/assets/fonts/mukta/MuktaMahee-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Mukta Mahee SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Mukta Mahee SemiBold'), url('/public/assets/fonts/mukta/MuktaMahee-SemiBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Mukta Mahee Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Mukta Mahee Bold'), url('/public/assets/fonts/mukta/MuktaMahee-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Mukta Mahee ExtraBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Mukta Mahee ExtraBold'), url('/public/assets/fonts/mukta/MuktaMahee-ExtraBold.woff') format('woff');
+}
+@font-face {
+font-family: abril;
+src: url("/public/assets/fonts/abril/4abc7b446177a4b533468cd3635fe0b6.woff2") format("woff2"),
+url("/public/assets/fonts/abril/4abc7b446177a4b533468cd3635fe0b6.woff") format("woff");
+}
+html {
+  font-size: 14px;
+}
 body {
   margin: 0;
+  direction: ltr;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif, 'Mukta Mahee ExtraBold';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  background: #1D1D1D;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+  margin: 0;
+}
+*, 
+*::after,
+*::before{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.container-main-title {
+  width: 840px;
+  margin: 0 auto;
+}
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.main-button{
+  width: 150px;
+  height: 50px;
+  background-color: #ff6c1c;
+  background-image: linear-gradient(to left, #ff6c1c , #f0a401);
+  border-radius: 30px;
+  color: #fff;
+  border: none;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+.main-button:hover{
+  background-color: #ff6c1c;
+  background-image: linear-gradient(to right, #ff6c1c , #f0a401);
+}
+.main-button-gradient-font {
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 30px;
+  color: #fff;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #EEB500;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+.main-button-gradient-font:hover {
+  color: #EEB500;
+}
+.small-button {
+  width: 106px;
+  height: 33px;
+  background-color: #ff6c1c;
+  background-image: linear-gradient(to left, #ff6c1c , #f0a401);
+  border-radius: 30px;
+  color: #fff;
+  border: none;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+.small-button:hover{
+  background-color: #ff6c1c;
+  background-image: linear-gradient(to right, #ff6c1c , #f0a401);
+}
+.actions {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vertical-padding {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.title {
+  margin-bottom: 20px;
+  font-size: 3.4rem;
+  font-weight: bold;
+}
+.descriptions {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 25px;
+  padding: 0 30px;
 }

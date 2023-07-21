@@ -1,0 +1,31 @@
+.faq-box{
+    background: #141414;
+}
+.faq-style {
+    display: flex;
+    flex-direction: row;
+}
+.faq-description{
+    width: 35%;
+    padding-right: 30px;
+}
+.faq-description h6 {
+    font-size: 1.1rem;
+    color: #EEB500;
+    margin-bottom: 30px;
+}
+.faq {
+    width: 65%;
+}
+.faq-holder {
+    background: #fff;
+    color: #000;
+    border-radius: 15px;
+    margin: 10px;
+}
+.faq-holder h3 {
+    padding: 20px;
+}
+.faq-holder p {
+    padding: 20px;
+}
