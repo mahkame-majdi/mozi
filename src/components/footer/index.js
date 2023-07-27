@@ -3,7 +3,6 @@ import '../../index.css'
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from '../logo';
 
 
 export default function Footer(){
@@ -23,12 +22,12 @@ export default function Footer(){
      }
     }
     function renderFarm() {
-        return genres.map((genre) => {
+        return genres.slice(0,10).map((genre) => {
             const {id, name} = genre;
             return(
                 <li key={id}>
                   <Link to={`/genres/${id}`}>
-                    <h5>{name}</h5>
+                    <p>{name}</p>
                  </Link>
                </li>
             )
@@ -37,28 +36,36 @@ export default function Footer(){
     return (
     <div className='footer'>
         <div className='container'>
-          <div className='footer-style'>
-            <Logo/>
-            <div className='column'>
+          <div className='footer-style '>
+            <div className='social'>
+             <img src='/assets/images/logo.png'/>  
+             <div className='social-media'>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+             </div>
+            </div>
+            <div className='column geners-column'>
               <h3>movies</h3>
               <ul>
                   {renderFarm()}
               </ul>
             </div>
-            <div className='column column-style'>
+            <div className='column column-style support-column'>
               <h3>support</h3>
-              <a href="#">help center</a>
-              <a href="#">FAQ</a>
-              <a href="#">contact us</a>
-              <a href="#">ticket support</a>
-              <a href="#">my account</a>
+              <a href="#"><p>help center</p></a>
+              <a href="#"><p>FAQ</p></a>
+              <a href="#"><p>contact us</p></a>
+              <a href="#"><p>ticket support</p></a>
+              <a href="#"><p>my account</p></a>
             </div>
-            <div className='column column-style'>
+            <div className='column column-style about-mozi-column'>
               <h3>about mozi</h3>
-              <Link to='/about-us'>about us</Link>
-              <a href="#">careers</a>
-              <a href="#">news & articles</a>
-              <a href="#">legal notices</a>
+              <Link to='/about-us'><p>about us</p></Link>
+              <a href="#"><p>careers</p></a>
+              <a href="#"><p>news & articles</p></a>
+              <a href="#"><p>legal notices</p></a>
             </div>
           </div>
           <div className='footer-bottom'>
@@ -67,7 +74,7 @@ export default function Footer(){
               <li><a href="#">privecy policy</a></li>
               <li><a href="#">cookie policy</a></li>
             </ul>
-           <p>Copyright © 2023 All rights reserved</p>
+            <p>Copyright © 2021 Mozi Streaming Media, All rights reserved. Present by MoxCreative.</p>
           </div>
       </div>
     </div>

@@ -36,11 +36,18 @@ export default function SingleMovie() {
                             </div>
                             <h1>{movie.title}</h1>
                             <p>{movie.imdb_rating} IMDB</p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                             <p>{movie.plot}</p>
-                            <button className="main-button">play video</button>
+                            <button className="main-button"><i class="fa-solid fa-play"></i>play video</button>
                         </div>
                         <div className="icon">
-                            <div className="player"></div>
+                            <div className="player">
+                                <i class="fa-solid fa-circle-play"></i>
+                            </div>
                             <p>play trailers</p>
                         </div>
                   </div>
