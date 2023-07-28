@@ -7,12 +7,15 @@
 }
 .faq-description{
     width: 35%;
-    padding-right: 30px;
+    padding-right: 40px;
 }
 .faq-description h6 {
     font-size: 1.1rem;
     color: #EEB500;
     margin-bottom: 30px;
+}
+.faq-description p {
+    font-size: 18px;
 }
 .faq {
     width: 65%;
@@ -21,11 +24,41 @@
     background: #fff;
     color: #000;
     border-radius: 15px;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 .faq-holder h3 {
-    padding: 20px;
+    font-size: 20px;
+}
+.faq-holder i {
+    font-size: 20px;
 }
 .faq-holder p {
     padding: 20px;
+    font-size: 18px;
+}
+.question-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 25px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: all 0.5s ease ;
+}
+.question-holder.show {
+    background-color: #ff6c1c;
+    background-image: linear-gradient(to left, #ff6c1c , #f0a401);
+    color: #fff;
+    transition: all 0.5s ease ;
+}
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease ;
+}
+.content.show {
+    height: auto;
+    max-height: 200px;
+    transition: all 0.5s ease;
 }

@@ -29,6 +29,7 @@
     position: relative;
     z-index: 2;
     margin-top: 100px;
+    margin-right: 50px;
     /* width: 500px;
     height: 500px; */
     width: 50%;
@@ -43,62 +44,49 @@
 }
 .movie .movie-data h1{
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 20px;
 } 
 .movie .movie-data p {
     font-size: 17px;
     margin-bottom: 20px;
 }
+.movie .movie-data .imdb {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+.movie .movie-data .imdb p {
+    margin-right: 20px;
+}
+.movie .movie-data .imdb i {
+    margin-right: 3px;
+    color: #f0a401;
+}
 .movie .movie-data i {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .movie .icon{
-    /* transform: translateX(50%) translateY(-50%);
-    top: 50%;
-    left: 50%; */
     position: relative;
     z-index: 2;
-    /* width: 700px; */
     width: 50%;
 }
-.movie .icon p{
+.movie .movie-player .icon .player {
+   text-align: center;
+}
+.movie .movie-player .icon .player i {
+    font-size: 60px;
+}
+.movie .movie-player .icon .player i:hover {
+    background-color: #f0a401;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.movie .movie-player .icon .player p{
     background-image: linear-gradient(to left, #ff6c1c, #f0a401);
     background-size: 100%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 20px;
 }
-/* .movie .movie-player .icon .player {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
-/* .movie .player{
-    position: relative;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #fff;
-    transition: all 1s;
-}
-.player::after{
-    position: absolute;
-    content: '';    
-    top: 50%;
-    left: 50%;
-    border-top: 10px solid transparent;
-    border-left: 20px solid #000;
-    border-bottom: 10px solid transparent;
-    transform: translateX(-50%) translateY(-50%);
-} */
-/* .movie .player .icon .play {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-	height: 0;
-	border-top: 10px solid transparent;
-	border-left: 20px solid transparent;
-	border-bottom: 10px solid transparent;
-} */
