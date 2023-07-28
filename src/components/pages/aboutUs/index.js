@@ -11,8 +11,8 @@ import TheStory, { story } from '../../theStory';
 export default function AboutUs() {
     return(
         <Fragment>
+            <Header/>
             <div className="top-header">
-             <Header/>
                 <div className="about-us">
                     <div className="container-main-title">
                         <h1>about us</h1>

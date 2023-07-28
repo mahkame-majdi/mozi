@@ -10,8 +10,8 @@ import FrequentlyAskQuestions, { faq } from '../../faq';
 export default function Home() {
     return(
         <Fragment>
+            <Header/>
             <div className="full-header">
-                <Header/>
                 <div className='home-page'>
                     <div className= "container-main-title">
                         <h1>Watch movie anytime, everywhere.</h1>
