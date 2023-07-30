@@ -1,4 +1,5 @@
 import './style.css';
+import { useState, useRef, useEffect } from "react";
 
 export const video = {
     title: "Video for Everyone",
@@ -30,6 +31,7 @@ export const video = {
     ]
 }
 export default function VideoBox(props) {
+
     function renderFarm() {
         return props.data.list.map(function(video, i) {
             return(
@@ -49,13 +51,39 @@ export default function VideoBox(props) {
             )
         });
     }
+    const [isIntersecting, setIsIntersecting] = useState(false);
+    const ref = useRef(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsIntersecting(entry.isIntersecting);
+        },
+        { rootMargin: "-500px" }
+      );
+      observer.observe(ref.current);
+  
+      return () => observer.disconnect();
+       }, [isIntersecting]
+      );
+  
+    useEffect(() => {
+      if (isIntersecting) {
+        ref.current.querySelectorAll('.video-for-everyone-wraper').forEach((el) => {
+          el.classList.add("animation");
+        });
+      }
+    }, [isIntersecting]);
+
     return (
-        <div className="video-for-everyone vertical-padding">
+        <div className="video-for-everyone vertical-padding"  ref={ref}>
             <div className="container">
-                <h1 className="title">{props.data.title}</h1>
-                <ul className="video-box">
-                    {renderFarm()}
-                </ul>
+                <div className="video-for-everyone-wraper">
+                    <h1 className="title">{props.data.title}</h1>
+                    <ul className="video-box">
+                        {renderFarm()}
+                    </ul>
+                </div>
             </div>
         </div>
     )

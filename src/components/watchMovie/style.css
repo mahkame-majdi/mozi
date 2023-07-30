@@ -7,13 +7,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 100px 0;
+    Transition: all ease-in 2s;
 }
+
 .watch .watch-movie .macbook{
     width: 600px;
 }
 .watch .watch-movie .macbook img{
     width: 100%;
 }
+
 .watch .watch-movie .description{
     width: 500px;
 }
@@ -29,4 +32,42 @@
 }
 .watch .watch-movie img{
     width: 100%;
+}
+/* @keyframes fade-left {
+    0% {
+        transform: translate(100%, 0%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+.animation {
+    animation: fade-left 2s ease;
+}
+@keyframes fade-right {
+    0% {
+        transform: translate(-100%, 0%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+.watch .watch-movie .description{
+    animation: fade-right 2s ease;
+} */
+.watch .watch-movie:first-child {
+    transform: translateX(-150%);
+    opacity: 0;
+}
+.watch .watch-movie:last-child {
+    transform: translateX(150%);
+    opacity: 0;
+}
+.animation-on-both {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
 }

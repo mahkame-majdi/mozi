@@ -1,8 +1,39 @@
+import React from 'react';
 import './style.css';
+import { useState, useRef, useEffect } from "react";
 
 export default function BestMovie() {
+
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      { rootMargin: "-300px" }
+    );
+    console.log(isIntersecting);
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [isIntersecting]);
+
+  useEffect(() => {
+    if (isIntersecting) {
+      ref.current.querySelectorAll('.best-movie-text-wrapper').forEach((el) => {
+        el.classList.add("animation");
+      });
+    } else {
+      ref.current.querySelectorAll(".best-movie-text-wrapper").forEach((el) => {
+        el.classList.remove("animation");
+      });
+    }
+  }, [isIntersecting]);
+
     return(
-            <div className="best-movie">
+            <div className="best-movie" ref={ref}>
                 <div className="container">
                     <div className="best-movie-text-wrapper">
                         <h1>The best movie and video on your home.</h1>

@@ -27,6 +27,19 @@
     padding-top: 150px;
     padding-right: 80px;
 }
+@keyframes fade-right {
+    0% {
+        transform: translate(-100%, 0%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+.animation {
+    animation: fade-right 2s ease;
+}
 .best-movie-text-wrapper h1 {
     font-size: 3.4rem;
     font-weight: bold;

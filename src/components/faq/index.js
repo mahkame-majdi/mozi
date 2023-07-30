@@ -1,6 +1,5 @@
 import './style.css';
-import { useState } from 'react';
-import Item from 'antd/es/list/Item';
+import { useState, useRef, useEffect } from "react";
 
 export const faq = {
     title: "Frequently ask questions.",
@@ -56,8 +55,36 @@ export default function FrequentlyAskQuestions(props) {
             )
         });
     }
+    const [isIntersecting, setIsIntersecting] = useState(false);
+    const ref = useRef(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsIntersecting(entry.isIntersecting);
+        },
+        { rootMargin: "-300px" }
+      );
+      console.log(isIntersecting);
+      observer.observe(ref.current);
+  
+      return () => observer.disconnect();
+    }, [isIntersecting]);
+  
+    useEffect(() => {
+      if (isIntersecting) {
+        ref.current.querySelectorAll('.faq-style').forEach((el) => {
+          el.classList.add("animation-on-both");
+        });
+      } else {
+        ref.current.querySelectorAll(".faq-style").forEach((el) => {
+          el.classList.remove("animation-on-both");
+        });
+      }
+    }, [isIntersecting]);
+
     return (
-        <div className="vertical-padding faq-box">
+        <div className="vertical-padding faq-box" ref={ref}>
             <div className="container">
                 <div className='faq-style'>
                     <div className='faq-description'>

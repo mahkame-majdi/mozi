@@ -4,6 +4,7 @@
 .faq-style {
     display: flex;
     flex-direction: row;
+    Transition: all ease-in 1s;
 }
 .faq-description{
     width: 35%;
@@ -61,4 +62,16 @@
     height: auto;
     max-height: 200px;
     transition: all 0.5s ease;
+}
+.faq-box .faq-style:first-child {
+    transform: translateX(-150%);
+    opacity: 0;
+}
+.faq-box .faq-style:last-child {
+    transform: translateX(150%);
+    opacity: 0;
+}
+.animation-on-both {
+    transform: translateX(0);
+    opacity: 1;
 }

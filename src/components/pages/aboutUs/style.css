@@ -19,12 +19,21 @@
     background-image: linear-gradient(180deg,#000000 0%, #1414143D 100%);
     opacity: 1;
 }
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
 .about-us{
     z-index: 2;
     color: #ffffff;
     position: relative;
     text-align: center;
     padding-top: 220px;
+    animation: fade-in 3s ease;
 }
 .about-us h1 {
     font-size: 70px;
