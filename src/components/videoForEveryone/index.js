@@ -59,7 +59,7 @@ export default function VideoBox(props) {
         ([entry]) => {
           setIsIntersecting(entry.isIntersecting);
         },
-        { rootMargin: "-500px" }
+        { rootMargin: "-300px" }
       );
       observer.observe(ref.current);
   
@@ -70,7 +70,7 @@ export default function VideoBox(props) {
     useEffect(() => {
       if (isIntersecting) {
         ref.current.querySelectorAll('.video-for-everyone-wraper').forEach((el) => {
-          el.classList.add("animation");
+          el.classList.add("animation-on-both");
         });
       }
     }, [isIntersecting]);

@@ -1,14 +1,19 @@
 .faq-box{
     background: #141414;
+    overflow: hidden;
+    Transition: all ease-in 1s;
 }
 .faq-style {
     display: flex;
     flex-direction: row;
     Transition: all ease-in 1s;
 }
-.faq-description{
+.faq-box .faq-style .faq-description{
     width: 35%;
     padding-right: 40px;
+    transform: translateX(-250%);
+    Transition: all ease-in 1s;
+    opacity: 0;
 }
 .faq-description h6 {
     font-size: 1.1rem;
@@ -18,7 +23,10 @@
 .faq-description p {
     font-size: 18px;
 }
-.faq {
+.faq-box .faq-style .faq{
+    transform: translateX(250%);
+    Transition: all ease-in 1s;
+    opacity: 0;
     width: 65%;
 }
 .faq-holder {
@@ -63,15 +71,9 @@
     max-height: 200px;
     transition: all 0.5s ease;
 }
-.faq-box .faq-style:first-child {
-    transform: translateX(-150%);
-    opacity: 0;
-}
-.faq-box .faq-style:last-child {
-    transform: translateX(150%);
-    opacity: 0;
-}
-.animation-on-both {
-    transform: translateX(0);
-    opacity: 1;
+.animation-on-both .faq-description,
+.animation-on-both .faq,
+.animation-on-both{
+    transform: translateX(0) !important;
+    opacity: 1 !important;
 }

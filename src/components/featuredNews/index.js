@@ -1,4 +1,5 @@
 import "./style.css";
+import { useState, useRef, useEffect } from "react";
 
 export const news = {
     title: "Featured News",
@@ -52,16 +53,41 @@ export default function FeaturedNews(props) {
             )
         });
     }
+    const [isIntersecting, setIsIntersecting] = useState(false);
+    const ref = useRef(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsIntersecting(entry.isIntersecting);
+        },
+        { rootMargin: "-300px" }
+      );
+      console.log(isIntersecting);
+      observer.observe(ref.current);
+  
+      return () => observer.disconnect();
+    }, [isIntersecting]);
+  
+    useEffect(() => {
+      if (isIntersecting) {
+        ref.current.querySelectorAll('.news-wraper').forEach((el) => {
+          el.classList.add("animation-on-both");
+        });
+      } 
+    }, [isIntersecting]);
     return (
-        <div className="news vertical-padding">
+        <div className="news vertical-padding" ref={ref}>
             <div className="container">
-                <div className="news-title">
-                    <h1 className="title">{props.data.title}</h1>
-                    <button className="small-button">more news</button>
+                <div className="news-wraper">
+                    <div className="news-title">
+                        <h1 className="title">{props.data.title}</h1>
+                        <button className="small-button">more news</button>
+                    </div>
+                    <ul className="news-box">
+                        {renderFarm()}
+                    </ul>
                 </div>
-                <ul className="news-box">
-                    {renderFarm()}
-                </ul>
             </div>
         </div>
     )

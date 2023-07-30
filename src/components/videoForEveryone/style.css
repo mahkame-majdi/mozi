@@ -1,5 +1,7 @@
 .video-for-everyone{
     background: #141414;
+    overflow: hidden;
+    Transition: all ease-in 0.5s;
 }
 .video-for-everyone h1{
     text-align: center;
@@ -45,16 +47,20 @@
     padding-bottom: 10px;
     font-size: 1.8rem;
 }
-@keyframes fade-up {
-    0% {
-        transform: translate(0%, 100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0%, 0%);
-        opacity: 1;
-    }
+
+.video-for-everyone .video-for-everyone-wraper .title{
+    transform: translateY(250%);
+    Transition: all ease-in 0.5s;
+    opacity: 0;
 }
-.video-for-everyone-wraper {
-    animation: fade-up 2s ease;
+.video-for-everyone .video-for-everyone-wraper .video-box{
+    transform: translateY(250%);
+    Transition: all ease-in 0.5s;
+    opacity: 0;
+}
+.animation-on-both .title,
+.animation-on-both .video-box,
+.animation-on-both{
+    transform: translateY(0) !important;
+    opacity: 1 !important;
 }

@@ -25,10 +25,6 @@ export default function WatchMovie() {
       ref.current.querySelectorAll('.watch-movie').forEach((el) => {
         el.classList.add("animation-on-both");
       });
-    } else {
-      ref.current.querySelectorAll(".watch-movie").forEach((el) => {
-        el.classList.remove("animation-on-both");
-      });
     }
   }, [isIntersecting]);
  

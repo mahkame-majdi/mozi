@@ -1,5 +1,7 @@
 .news {
     background-color: #141414;
+    overflow: hidden;
+    Transition: all ease 1s;
 }
 .news-title{
     display: flex;
@@ -7,7 +9,6 @@
     flex-direction: row;
     align-content: center;
     align-items: center;
-    padding: 0 30px 0 10px;
 }
 .news-title h1 {
     margin: 0;
@@ -45,4 +46,20 @@
     margin: 0;
     font-size: 14px;
     line-height: 23px;
+}
+.news .news-wraper .news-title{
+    transform: translateY(250%);
+    Transition: all ease 1s;
+    opacity: 0;
+}
+.news .news-wraper .news-box{
+    transform: translateY(250%);
+    Transition: all ease 1s;
+    opacity: 0;
+}
+.animation-on-both .news-title,
+.animation-on-both .news-box,
+.animation-on-both{
+    transform: translateY(0) !important;
+    opacity: 1 !important;
 }

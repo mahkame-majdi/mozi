@@ -7,6 +7,7 @@
     width: 100%;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 .hero::after{
     position: absolute;
@@ -43,4 +44,32 @@
     font-size: 16px;
     line-height: 25px;
     padding: 0 100px;
+}
+.text h1{
+    transform: translateY(500%);
+    Transition: all ease-in 1s;
+    opacity: 0;
+}
+.text h3{
+    transform: translateY(250%);
+    Transition: all ease-in 1s;
+    opacity: 0;
+}
+.text p{
+    transform: translateY(250%);
+    Transition: all ease-in 1s;
+    opacity: 0;
+}
+.text button{
+    transform: translateY(-500%);
+    Transition: all ease-in 1s;
+    opacity: 0;
+}
+.animation-on-both h1,
+.animation-on-both h3,
+.animation-on-both p,
+.animation-on-both button,
+.animation-on-both{
+    transform: translateY(0) !important;
+    opacity: 1 !important;
 }

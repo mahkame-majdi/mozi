@@ -1,6 +1,6 @@
 import axios from "axios";
 import Header from '../../header';
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../../footer";
 import "./style.css"
@@ -21,10 +21,33 @@ export default function SingleMovie() {
          navigate("/");
         });
     }, [])
+    const [isIntersecting, setIsIntersecting] = useState(false);
+    const ref = useRef(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsIntersecting(entry.isIntersecting);
+        },
+        { rootMargin: "-300px" }
+      );
+      console.log(isIntersecting);
+      observer.observe(ref.current);
+  
+      return () => observer.disconnect();
+    }, [isIntersecting]);
+  
+    useEffect(() => {
+      if (isIntersecting) {
+        ref.current.querySelectorAll('.movie-player').forEach((el) => {
+          el.classList.add("animation-on-both");
+        });
+      }
+    }, [isIntersecting]);
     return (
         <Fragment>
-            <div className="movie" style={{backgroundImage:`url(${movie.poster})`}}>
-             <Header/>
+            <Header/>
+            <div className="movie" ref={ref} style={{backgroundImage:`url(${movie.poster})`}}>
                 <div className="container">
                  <div className="movie-player">
                         <div className="movie-data">

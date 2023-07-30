@@ -25,10 +25,6 @@ export default function BestMovie() {
       ref.current.querySelectorAll('.best-movie-text-wrapper').forEach((el) => {
         el.classList.add("animation");
       });
-    } else {
-      ref.current.querySelectorAll(".best-movie-text-wrapper").forEach((el) => {
-        el.classList.remove("animation");
-      });
     }
   }, [isIntersecting]);
 
