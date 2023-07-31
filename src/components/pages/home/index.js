@@ -2,10 +2,12 @@ import './style.css';
 import Header from '../../header';
 import Footer from '../../footer';
 import WatchMovie from '../../watchMovie';
+import EXploreOurTilte from '../../exploreOurTitles';
 import { Fragment } from 'react';
 import BestMovie from '../../bestMovie';
 import VideoBox, { video } from '../../videoForEveryone';
 import FrequentlyAskQuestions, { faq } from '../../faq';
+import Trial from '../../trial';
 
 export default function Home() {
     return(
@@ -23,8 +25,10 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <EXploreOurTilte></EXploreOurTilte>
             <VideoBox data= {video} ></VideoBox>
             <BestMovie/>
+            <Trial></Trial>
             <WatchMovie/>
             <FrequentlyAskQuestions data= {faq}></FrequentlyAskQuestions>
             <Footer/>

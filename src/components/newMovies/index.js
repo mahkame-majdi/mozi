@@ -40,7 +40,7 @@ export default function NewMovies(props){
                             <MovieList data={movies.data}/>
                         </li>
                     </ul>
-                    <Button type="primary">salam</Button>
+                    {/* <Button type="primary">salam</Button> */}
                     <Pagination onChange={changePage} defaultCurrent={movies.metadata.current_page} total={movies.metadata.total_count}/>
                 </div>
             </div>

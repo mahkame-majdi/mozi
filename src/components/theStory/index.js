@@ -32,6 +32,7 @@ export default function TheStory(props) {
             )
         });
     }
+    
     return (
         <div className="vertical-padding story-box">
             <div className="container-main-title">
