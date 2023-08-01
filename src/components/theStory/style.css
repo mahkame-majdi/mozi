@@ -2,19 +2,8 @@
     text-align: center;
     background: #141414;
 }
-@keyframes fade-up {
-    0% {
-        transform: translate(0%, 100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0%, 0%);
-        opacity: 1;
-    }
-}
 .story-box-wraper {
     padding: 0 50px;
-    animation: fade-up 2s ease;
 }
 .story-box h5 {
     color: #EEB500;
@@ -53,7 +42,17 @@
     font-weight: normal;
     margin-bottom: 30px;
 }
-
+.story-box-wraper .story-box-animation{
+    transform: translateY(250%);
+    Transition: all ease-in 1s;
+    opacity: 0;
+}
+.animation .story-box-animation,
+.animation{
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
+/* 
 @property --num {
     syntax: "<integer>";
     initial-value: 8;
@@ -74,4 +73,4 @@
     to {
       --num: 8;
     }
-}
+} */
