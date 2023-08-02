@@ -18,7 +18,7 @@ export default function Home() {
                     <div className= "container-main-title">
                         <h1>Watch movie anytime, everywhere.</h1>
                         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</h3>
-                        <div className="actions">
+                        <div className="header-actions">
                             <button className='main-button-gradient-font'>learn more</button>
                             <button className='main-button'>go permium</button>
                         </div>

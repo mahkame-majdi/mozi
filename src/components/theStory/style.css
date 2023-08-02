@@ -52,6 +52,22 @@
     transform: translateY(0) !important;
     opacity: 1 !important;
 }
+@media all and (max-width: 750px) {
+    .story-box ul li {
+        width: 50%;
+    }
+}
+@media all and (max-width: 500px) {
+    .story-box ul li {
+        width: 100%;
+    }
+    .story-box-animation h1{
+        font-size: 2.4rem;
+    }
+    .story h3 {
+        font-size: 2.4rem;
+    }
+}
 /* 
 @property --num {
     syntax: "<integer>";

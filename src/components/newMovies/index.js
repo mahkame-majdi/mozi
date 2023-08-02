@@ -2,7 +2,8 @@ import './style.css';
 import { useEffect, useState } from "react";
 import MovieList from "../movieList";
 import axios from 'axios';
-import { Button, Pagination } from 'antd';
+import { Pagination } from 'antd';
+
 
 export default function NewMovies(props){
     const [movies, setMovies] = useState({data: [], metadata:{

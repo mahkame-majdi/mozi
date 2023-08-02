@@ -41,15 +41,32 @@
     width: 500px;
 }
 .watch .watch-movie .description h1{
-    margin-bottom: 20px;
     font-size: 3.4rem;
     font-weight: bold;
 }
 .watch .watch-movie .description p{
     font-size: 18px;
     margin-bottom: 20px;
+    margin-top: 20px;
     line-height: 25px;
 }
 .watch .watch-movie img{
     width: 100%;
+}
+@media all and (max-width: 1100px) {
+    .watch .watch-movie .description {
+        width: 100%;    
+        align-items: center;
+        text-align: center;
+    }
+    .watch .watch-movie .macbook {
+        display: none;
+    }
+}
+@media all and (max-width: 550px) {
+    .watch .watch-movie .description h1{
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        font-size: 2.4rem;
+    }
 }

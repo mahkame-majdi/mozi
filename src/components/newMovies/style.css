@@ -16,3 +16,68 @@
     font-size: 3.2rem;
     text-transform: capitalize;
 }
+:where(.css-dev-only-do-not-override-dfjnss).ant-pagination {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+
+}
+.css-dev-only-do-not-override-dfjnss .ant-pagination {
+    color: #fff;
+    background-color: transparent;
+}
+:where(.css-dev-only-do-not-override-dfjnss).ant-pagination .ant-pagination-item a:hover {
+    color: #ff6c1c;
+}
+:where(.css-dev-only-do-not-override-dfjnss).ant-pagination .ant-pagination-prev button {
+    color: #fff;
+    background-color: transparent;
+}
+:where(.css-dev-only-do-not-override-dfjnss).ant-pagination .ant-pagination-item a {
+    color: #fff;
+    background-color: transparent;
+}
+/* 
+:where(.css-dev-only-do-not-override-dfjnss).ant-pagination .ant-pagination-item a:focus {
+    color: #ff6c1c;
+} */
+:where(.css-dev-only-do-not-override-dfjnss).ant-pagination .ant-pagination-next .ant-pagination-item-link {
+    color: #fff; 
+}
+/* :where(.css-dev-only-do-not-override-dfjnss).ant-pagination .ant-pagination-disabled .ant-pagination-item-link {
+    color: #fff; 
+} */
+:where(.css-dev-only-do-not-override-dfjnss).ant-pagination .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis {
+    color: #fff;
+    background-color: transparent;
+}
+:where(.css-dev-only-do-not-override-dfjnss).ant-pagination .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis {
+    color: #fff;
+    background-color: transparent;
+} 
+.ant-select-show-search:where(.css-dev-only-do-not-override-dfjnss).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    color: #fff;
+    background-color: #ff6c1c;
+    background-image: linear-gradient(to right, #ff6c1c , #f0a401);
+    border: none;
+}
+/* :where(.css-dev-only-do-not-override-dfjnss)[class^="ant-select"] [class^="ant-select"], :where(.css-dev-only-do-not-override-dfjnss)[class*=" ant-select"] [class^="ant-select"], :where(.css-dev-only-do-not-override-dfjnss)[class^="ant-select"] [class*=" ant-select"], :where(.css-dev-only-do-not-override-dfjnss)[class*=" ant-select"] [class*=" ant-select"] {
+    color: #fff;
+    background-color: #ff6c1c;
+    background-image: linear-gradient(to right, #ff6c1c , #f0a401);
+} */
+:where(.css-dev-only-do-not-override-dfjnss).ant-pagination .ant-pagination-item-active {
+    background-color: #ff6c1c;
+    background-image: linear-gradient(to right, #ff6c1c , #f0a401);
+    border: none; 
+}
+@media all and (max-width: 1000px) {
+    .new-movies .vertical-padding .heading h1{
+        font-size: 2.2rem;
+    }
+}
+@media all and (max-width: 400px) {
+    .new-movies .vertical-padding .heading h1{
+        font-size: 2rem;
+    }
+}

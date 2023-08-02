@@ -19,7 +19,7 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 /* .movie-list ul li img::after {
     background: rgba(0, 0, 0, 0.7);
@@ -64,4 +64,32 @@
 .movie-box-hover p{
     font-size: 15px;
     margin-bottom: 20px;
+}
+@media all and (max-width: 1100px) {
+    .movie-box .movie-box-hover i  {
+        display: none;
+    }
+    .movie-box .movie-box-hover{
+        padding-top: 10px;
+    }
+}
+@media all and (max-width: 1000px) {
+    .movie-list ul .movie-box{
+        width: 25%;
+    }
+}
+@media all and (max-width: 800px) {
+    .movie-list ul .movie-box{
+        width: 33.33%;
+    }
+}
+@media all and (max-width: 600px) {
+    .movie-list ul .movie-box{
+        width: 50%;
+    }
+}
+@media all and (max-width: 400px) {
+    .movie-list ul .movie-box{
+        width: 100%;
+    }
 }

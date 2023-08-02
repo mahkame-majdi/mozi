@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: row;
     Transition: all ease-in 1s;
+    flex-wrap: wrap;
 }
 .faq-box .faq-style .faq-description{
     width: 35%;
@@ -76,4 +77,23 @@
 .animation-on-both{
     transform: translateX(0) !important;
     opacity: 1 !important;
+}
+@media all and (max-width: 1000px) {
+    .faq-box .faq-style .faq-description{
+        width: 100%;    
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .faq-box .faq-style .faq {
+       width: 100%;
+       padding: 20px;
+    }
+}
+@media all and (max-width: 550px) {
+    .faq-box .faq-style .faq-description h1{
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        font-size: 2.4rem;
+    }
 }

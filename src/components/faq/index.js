@@ -80,9 +80,9 @@ export default function FrequentlyAskQuestions(props) {
     }, [isIntersecting]);
 
     return (
-        <div className="vertical-padding faq-box" ref={ref}>
+        <div className="faq-box" ref={ref}>
             <div className="container">
-                <div className='faq-style'>
+                <div className='faq-style vertical-padding '>
                     <div className='faq-description'>
                         <h6>FAQ</h6>
                         <h1 className="title">{props.data.title}</h1>

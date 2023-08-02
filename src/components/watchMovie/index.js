@@ -33,7 +33,8 @@ export default function WatchMovie() {
       <div className='container'>
         <div className='watch-movie'>
           <div className='description'>
-            <h1>watch movie <br/>everywher, anytime.</h1>
+            <h1>watch movie</h1>
+            <h1>everywher, anytime.</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
             <button className='main-button'>discover more</button>
           </div>

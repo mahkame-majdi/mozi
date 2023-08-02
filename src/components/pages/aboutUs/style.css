@@ -44,3 +44,16 @@
     font-size: 1.1rem;
     font-weight: normal;
 }
+@media all and (max-width: 750px) {
+    .about-us{
+      padding-top: 180px;
+    }
+}
+@media all and (max-width: 550px) {
+    .about-us{
+        padding-top: 130px;
+    }
+    .about-us h1{
+        font-size: 45px;
+    }
+}

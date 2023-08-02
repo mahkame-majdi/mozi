@@ -1,6 +1,6 @@
 .movie{
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     min-height: 100px;
     background-position: bottom center;
     background-size: cover;
@@ -101,4 +101,33 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 20px;
+}
+@media all and (max-width: 1000px) {
+    .movie .movie-player{
+        padding: 50px 10px 0 10px;
+    }
+}
+@media all and (max-width: 800px) {
+    .movie .movie-data {
+        width: 100%;
+    }
+}
+@media all and (max-width: 600px) {
+    .movie .icon {
+       display: none;
+    }
+    .movie .movie-data h1{
+        font-size: 2.3rem;
+    }
+}
+@media all and (max-width: 350px) {
+    .movie .movie-player{
+        padding-top: 10px ;
+    }
+    .movie .movie-data .data-box {
+       display: none;
+    }
+    .movie .movie-data h1{
+        font-size: 2.3rem;
+    }
 }

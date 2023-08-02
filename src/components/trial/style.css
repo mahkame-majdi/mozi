@@ -163,3 +163,17 @@ ul li:nth-child(2) .trial-box-title:hover{
     transform: translate(0, 0) !important;
     opacity: 1 !important;
 }
+@media all and (max-width: 800px) {
+    .trial-wraper .main-trial-box .trial-animation {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+@media all and (max-width: 550px) {
+    .trial .trial-wraper .trial-title h1 {
+        font-size: 2.4rem;
+    }
+    .trial .trial-wraper .trial-contact h1 {
+        font-size: 2.4rem;
+    }
+}

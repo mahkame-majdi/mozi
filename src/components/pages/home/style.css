@@ -44,10 +44,32 @@
     font-size: 65px;
     margin-bottom: 30px;
     padding-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 .home-page h3 {
     font-size: 1.2rem;
     font-weight: normal;
     margin-bottom: 40px;
     padding: 0;
+}
+.header-actions {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@media all and (max-width: 750px) {
+    .home-page{
+      padding-top: 80px;
+    }
+}
+@media all and (max-width: 550px) {
+    .home-page{
+        padding-top: 0;
+      }
+    .home-page h1{
+        font-size: 45px;
+    }
 }

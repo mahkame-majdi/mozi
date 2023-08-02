@@ -73,3 +73,8 @@
     transform: translateY(0) !important;
     opacity: 1 !important;
 }
+@media all and (max-width: 550px) {
+    .text h1{
+        font-size: 100px;
+    }
+}

@@ -50,3 +50,23 @@
     margin-bottom: 40px;
     line-height: 25px;
 }
+@media all and (max-width: 1000px) {
+    .best-movie-text-wrapper{
+        width: 100%;
+        padding-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media all and (max-width: 550px) {
+    .best-movie-text-wrapper{ 
+        padding-top: 10px;
+    }
+    .best-movie-text-wrapper h1 {
+        font-size: 2.4rem;
+        font-weight: bold;
+    }
+}

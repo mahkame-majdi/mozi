@@ -200,3 +200,18 @@ a {
   line-height: 25px;
   padding: 0 30px;
 }
+@media all and (max-width: 1300px) {
+  .container{
+    width: 100%;
+  }
+} 
+@media all and (max-width: 900px) {
+  .container-main-title{
+    width: 100%;
+  }
+} 
+@media all and (max-width: 350px) {
+  .large-button {
+    width: 130px;
+  }
+} 
