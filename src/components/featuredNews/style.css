@@ -76,4 +76,12 @@
     .news-title h1{
         font-size: 2.4rem;
     }
+    .news .news-wraper .news-title{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .news .news-wraper .news-box{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

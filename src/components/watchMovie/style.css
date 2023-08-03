@@ -69,4 +69,8 @@
         text-overflow: ellipsis; 
         font-size: 2.4rem;
     }
+    .watch .watch-movie .description{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

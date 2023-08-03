@@ -63,7 +63,7 @@
 }
 @media all and (max-width: 550px) {
     .best-movie-text-wrapper{ 
-        padding-top: 10px;
+        padding-top: 20px;
     }
     .best-movie-text-wrapper h1 {
         font-size: 2.4rem;

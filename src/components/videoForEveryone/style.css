@@ -76,4 +76,12 @@
     .video-for-everyone h1{
         font-size: 2.4rem;
     }
+    .video-for-everyone .video-for-everyone-wraper .title {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+    }
+    .video-for-everyone .video-for-everyone-wraper .video-box{
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+    }
 }

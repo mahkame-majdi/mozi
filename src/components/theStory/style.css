@@ -67,6 +67,10 @@
     .story h3 {
         font-size: 2.4rem;
     }
+    .story-box-wraper .story-box-animation{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 /* 
 @property --num {
