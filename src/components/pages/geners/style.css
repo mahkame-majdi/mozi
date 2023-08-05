@@ -1,0 +1,104 @@
+.genre {
+    background-image: url('/public/assets/images/videoprojector.jpg');
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    height: 60vh;
+    min-height: 400px;
+}
+.genre::after{
+    position: absolute;
+    content: "";
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(180deg,#000000 0%, #1414143D 100%);
+    opacity: 1;
+}
+.about-genre{
+    z-index: 2;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    padding-top: 220px;
+    animation: fade-in 3s ease;
+}
+.genre h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.genre h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+.all-geners .gener-list h1 {
+    font-size: 3.2rem;
+    text-transform: capitalize;
+}
+.all-geners .gener-list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.all-geners .gener-list ul li {
+    width: 12.5%;
+    padding: 10px 0;
+}
+.all-geners .gener-list ul li a {
+    color: #ffffff;
+    font-size: 15x;
+}
+.all-geners .gener-list ul li:hover a {
+    color: #EEB500;
+}
+@media all and (max-width: 1300px) {
+    .all-geners .gener-list ul li {
+        width: 14.28%;
+        padding: 10px;
+    }
+}
+@media all and (max-width: 1100px) {
+    .all-geners .gener-list ul li {
+        width: 16.66%;
+        padding: 10px;
+    }
+}
+@media all and (max-width: 1100px) {
+    .all-geners .gener-list ul li {
+        width: 20%;
+    }
+}
+@media all and (max-width: 900px) {
+    .all-geners .gener-list ul li {
+        width: 25%;
+    }
+}
+@media all and (max-width: 750px) {
+    .about-genre{
+      padding-top: 180px;
+    }
+    .all-geners .gener-list ul li {
+        width: 33.33%;
+    }
+}
+@media all and (max-width: 550px) {
+    .about-genre{
+        padding-top: 130px;
+    }
+    .about-genre h1{
+        font-size: 45px;
+    }
+    .all-geners .gener-list ul li {
+        width: 50%;
+    }
+}
+@media all and (max-width: 350px) {
+    .all-geners .gener-list ul li {
+        width: 100%;
+    }
+}

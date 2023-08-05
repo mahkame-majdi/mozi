@@ -1,0 +1,132 @@
+.single-genre-header {
+    background-image: url('/public/assets/images/cinama.jpg');
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    height: 60vh;
+    min-height: 400px;
+}
+.single-genre-header::after{
+    position: absolute;
+    content: "";
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(180deg,#000000 0%, #1414143D 100%);
+    opacity: 1;
+}
+.single-genre-title{
+    z-index: 2;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    padding-top: 220px;
+    animation: fade-in 3s ease;
+}
+.single-genre-title h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.single-genre-title h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+.single-genre-wraper ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+.single-genre-wraper ul li {
+    width: 20%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 10px;
+}
+.single-genre-wraper ul li img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.single-genre-wraper ul li:hover img {
+    opacity: 0.2;
+}
+.single-genre-wraper ul li .genre-data {
+    position: absolute;
+    inset: 0;
+    min-height: 325px;
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(500px);
+    opacity: 0;
+    overflow: hidden;
+}
+.single-genre-wraper ul li:hover .genre-data.fade-up {
+    transform: translateX(0);
+    opacity: 1;
+}
+.genre-data i {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.genre-data h3 {
+    font-size: 20px;
+}
+.genre-data p{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+@media all and (max-width: 1100px) {
+    .genre-data i  {
+        display: none;
+    }
+    .movie-box .movie-box-hover{
+        padding-top: 10px;
+    }
+}
+@media all and (max-width: 1000px) {
+    .single-genre-wraper ul li {
+        width: 25%;
+    }
+}
+@media all and (max-width: 800px) {
+    .single-genre-wraper ul li {
+        width: 33.33%;
+    }
+}
+@media all and (max-width: 750px) {
+    .single-genre-title{
+      padding-top: 180px;
+    }
+}
+@media all and (max-width: 600px) {
+    .single-genre-wraper ul li {
+        width: 50%;
+    }
+}
+@media all and (max-width: 550px) {
+    .single-genre-title{
+        padding-top: 130px;
+    }
+    .single-genre-title h1{
+        font-size: 45px;
+    }
+}
+@media all and (max-width: 400px) {
+    .single-genre-wraper ul li {
+        width: 100%;
+    }
+}

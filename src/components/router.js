@@ -4,6 +4,7 @@ import NotFound from "./pages/notFound";
 import SingleMovie from "./pages/singleMovie";
 import AboutUs from "./pages/aboutUs";
 import Genres from "./pages/geners";
+import SingleGenrePage from "./pages/SingleGenrePage"
 
 const router = createBrowserRouter([
     {
@@ -19,8 +20,12 @@ const router = createBrowserRouter([
         element: <SingleMovie/>
     },
     {
-        path: "/genres/:id",
+        path: "/genres",
         element: <Genres/>
+    },
+    {
+        path: "/genres/:genreid",
+        element:<SingleGenrePage/>,
     },
     {
         path: "*",

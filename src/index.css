@@ -155,6 +155,23 @@ a {
   background-color: #ff6c1c;
   background-image: linear-gradient(to right, #ff6c1c , #f0a401);
 }
+.extra-large-button {
+  background-color: #1D1D1D;
+  border-radius: 50px;
+  width: 400px;
+  height: 85px;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+}
+.extra-large-button:hover {
+  background-color: #ff6c1c;
+  background-image: linear-gradient(to right, #ff6c1c , #f0a401);
+}
+.extra-large-button.active {
+  background-color: #ff6c1c;
+  background-image: linear-gradient(to right, #ff6c1c , #f0a401);
+}
 .play-button {
   width: 120px;
   height: 40px;
@@ -204,6 +221,10 @@ a {
   .container{
     width: 100%;
   }
+  .extra-large-button {
+    width: 300px;
+    height: 65px;
+  }
 } 
 @media all and (max-width: 900px) {
   .container-main-title{
@@ -213,5 +234,9 @@ a {
 @media all and (max-width: 350px) {
   .large-button {
     width: 130px;
+  }
+  .extra-large-button {
+    width: 150px;
+    height: 45px;
   }
 } 

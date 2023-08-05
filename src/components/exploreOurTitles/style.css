@@ -1,0 +1,42 @@
+.explore {
+    background: #141414;
+    text-align: center;
+}
+.explore .explore-wraper h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.explore .explore-wraper .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    padding: 10px;
+}
+.explore .explore-wraper .buttons li {
+    width: 33.33%;
+}
+.content-slider {
+    position: relative;
+    top: 0;
+    left: 0;
+    /* padding-bottom: 250px;
+    padding-top: 50px; */
+}
+.genre-content {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.genre-content.active {
+    visibility: visible;
+    opacity: 1;
+}
+@media all and (max-width: 950px) {
+    .explore .explore-wraper .buttons li {
+    width: 100%;
+    padding: 10px;
+  }
+} 

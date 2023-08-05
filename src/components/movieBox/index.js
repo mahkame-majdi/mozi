@@ -5,7 +5,9 @@ export default function MovieBox(props) {
     return(
         <li className="movie-box">
             <div className="movie-box-style">
-                <img className="zoom" src={props.image} alt={props.title}/>
+                <div className="image-style">
+                   <img className="zoom" src={props.image} alt={props.title}/>
+                </div>
                 <div className="movie-box-hover fade-up">
                     <i class="fa-regular fa-circle-play"></i>
                     <h3>{props.title}</h3>

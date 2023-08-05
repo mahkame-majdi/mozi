@@ -26,7 +26,7 @@ export default function Footer(){
             const {id, name} = genre;
             return(
                 <li key={id}>
-                  <Link to={`/genres/${id}`}>
+                  <Link to={`/genres/${id}`} target="_blank">
                     <p>{name}</p>
                  </Link>
                </li>

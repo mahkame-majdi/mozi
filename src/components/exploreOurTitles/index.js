@@ -1,85 +1,92 @@
 import './style.css'
-import { Fragment } from "react"; 
-import axios from 'axios';
-import { useEffect, useState } from "react";
+import axios from "axios";
+import { Fragment, useEffect, useState } from "react";
+import FirstGenreList from '../firstGenreList';
+import SecondGenreList from '../secondGenreList';
+import ThirdGenreList from '../thirdGenreList';
 import { Link } from "react-router-dom";
 
 
 export default function EXploreOurTilte(props){
-    const [movies, setMovies] = useState({data: [], metadata:{
-        current_page: "1",
-        page_count: 25,
-        per_page: 10,
-        total_count: 250}});
-    const [loading, setLouding] = useState(false);
-    useEffect (() => {
-     document.title ="movie list";
-    }, [])
-    useEffect(() => {
-        getApi();
-    }, [])
-    function getApi(page=1) {
-        setLouding(true);
-        axios.get('https://moviesapi.ir/api/v1/genres/${genre_id}/movies')
-        .then(function(response){
-            setMovies(response.data.data);
-            setLouding(false);
-        });
+ const [loading, setLoading] = useState(false);
+ const [genres, setGenres] = useState([]);
+    useEffect (function() {
+        getApi()
+    }, []);
+    async function getApi() {
+     try{
+       setLoading(true);
+       const response = await axios.get("https://moviesapi.ir/api/v1/genres")
+       setGenres(response.data);
+       setLoading(false);
+     } catch (e) {
+        setLoading(false);
+     }
     }
-    return(
+    function renderFarm() {
+        return genres.slice(2,5).map((genre) => {
+            const {id, name} = genre;
+            return(
+                <li key={id}>
+                    <button className='extra-large-button'>
+                       <h3>{name}</h3>
+                    </button>
+               </li>
+            )
+        })
+    }
+    const tabs = document.querySelectorAll('.extra-large-button');
+    const all_content = document.querySelectorAll('.genre-content');
+
+    tabs.forEach((tab, index)=> {
+        tab.addEventListener('click', ()=>{
+            tabs.forEach(tab => {tab.classList.remove('active')});
+            tab.classList.add('active');
+
+            all_content.forEach(content=>{content.classList.remove('active')});
+            all_content[index].classList.add('active');
+        })
+    })
+    return (
         <Fragment>
-          <li className="movie-box">
-            <Link to= {`/genres/${props.genre_id}`} target="_blank">
-                <img src={props.image} alt={props.title}/>
-            </Link>
-           </li>
-       </Fragment>
-    ) 
+            <div className="explore vertical-padding">
+                <div className='container'>
+                    <div className="explore-wraper">
+                        <h1>Explore our most popular titles</h1>
+                        <ul className='buttons'>
+                            <li>
+                                <button className='extra-large-button btn1'>
+                                <h3>action</h3>
+                                </button>
+                            </li>
+                            <li>
+                                <button className='extra-large-button btn2 active'>
+                                <h3>biography</h3>
+                                </button>
+                            </li>
+                            <li>
+                                <button className='extra-large-button btn3'>
+                                <h3>history</h3>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className='content-slider'>
+                        <div className="genre-content">
+                            <FirstGenreList genre_id={3}></FirstGenreList>
+                        </div>
+                        <div className="genre-content active">
+                            <SecondGenreList genre_id={4}></SecondGenreList>
+                        </div>
+                        <div className="genre-content">
+                            <ThirdGenreList genre_id={5}></ThirdGenreList>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Fragment>
+    )
 }
-// import { useEffect } from "react";
-// import { useState } from "react";
-// import { Link, useParams } from "react-router-dom";
-// import axios from "axios";
 
-
-// export default function EXploreOurTilte(){
-//     const {genreid,name} = useParams();
-//     const [genre,setGenre] = useState([]);
-//     useEffect(()=>{
-//         getApi()
-//     },[genreid]);
-//        function getApi() {
-//         axios.get(`https://moviesapi.ir/api/v1/genres/${genreid}/movies`)
-//         .then(function (response) {
-//           setGenre(response.data.data);
-//         }
-//           )}
-//         function genreFarm(){
-//             return genre.data.map(function(eachGenre){
-//                 const {id ,poster,title} = eachGenre;
-//                 return (
-//                     <li key={id}>
-//                         <Link to= {`/Movies/${id}`}><img src={poster}/>
-//                             <h4>{title}</h4>
-//                         </Link>
-//                     </li>
-//                 )})
-//             }
-                
-//     return(
-
-//             <div className="Container">
-//             <h1 >{name}</h1>
-//                 <ul >
-//                     {genreFarm()}
-//                 </ul>
-//             </div>
-        
-//     )
-          
-          
-        
-//       }
-    
 
     
