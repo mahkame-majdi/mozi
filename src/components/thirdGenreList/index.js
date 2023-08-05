@@ -29,7 +29,7 @@ export default function ThirdGenreList(props){
                         <i class="fa-regular fa-circle-play"></i>
                         <h3>{film.title}</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dolor</p>
-                        <Link to= {`/genres/${props.genre_id}/movies`} target="_blank"><button className="play-button">play movie</button></Link>
+                        <Link to= {`/movie/${film.id}`} target="_blank"><button className="play-button">play movie</button></Link>
                     </div>
                 </div>
         ))}
