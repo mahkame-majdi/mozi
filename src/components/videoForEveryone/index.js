@@ -6,25 +6,25 @@ export const video = {
     list: [
         {
             imageSrc: '/assets/images/family.JPG',
-            link: "#",
+            link: `/genres/${13}` ,
             heading: "Family Movies",
             describe: "Facilisis fermentum erat nec platea venenatis massa malesuada nibh maecenas congue magna",
         },
         {
             imageSrc: '/assets/images/friends.JPG',
-            link: "#",
+            link: `/genres/${16}`,
             heading: "Teen Movies",
             describe: "Facilisis fermentum erat nec platea venenatis massa malesuada nibh maecenas congue magna",
         },
         {
             imageSrc: '/assets/images/kids.JPG',
-            link: "#",
+            link: `/genres/${15}`,
             heading: "Kids Movies",
             describe: "Facilisis fermentum erat nec platea venenatis massa malesuada nibh maecenas congue magna",
         },
         {
             imageSrc: '/assets/images/football.JPG',
-            link: "#",
+            link: `/genres/${21}`,
             heading: "Sports Video",
             describe: "Facilisis fermentum erat nec platea venenatis massa malesuada nibh maecenas congue magna",
         },

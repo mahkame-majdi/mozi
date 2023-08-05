@@ -52,7 +52,7 @@ export default function SingleGenrePage(){
       <div className="single-genre vertical-padding">
         <div className="container">
           <div className="single-genre-wraper">
-            <h1>{name}</h1>
+            <h1 >{name}</h1>
             <ul>
               {genreFarm()}
             </ul>

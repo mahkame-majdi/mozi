@@ -82,7 +82,7 @@
 }
 @media all and (max-width: 1300px) {
     .footer-style {
-        margin: 20px;
+        padding: 20px;
     }
 }
 @media all and (max-width: 1100px) {

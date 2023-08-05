@@ -20,7 +20,7 @@ export default function Home() {
                         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</h3>
                         <div className="header-actions">
                             <button className='main-button-gradient-font'>learn more</button>
-                            <button className='main-button'>go permium</button>
+                            <button className='main-button' >go permium</button>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@ export default function Home() {
             <EXploreOurTilte></EXploreOurTilte>
             <VideoBox data= {video} ></VideoBox>
             <BestMovie/>
-            <Trial></Trial>
+            <Trial/>
             <WatchMovie/>
             <FrequentlyAskQuestions data= {faq}></FrequentlyAskQuestions>
             <Footer/>

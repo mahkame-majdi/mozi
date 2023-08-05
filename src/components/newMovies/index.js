@@ -4,7 +4,6 @@ import MovieList from "../movieList";
 import axios from 'axios';
 import { Pagination } from 'antd';
 
-
 export default function NewMovies(props){
     const [movies, setMovies] = useState({data: [], metadata:{
         current_page: "1",

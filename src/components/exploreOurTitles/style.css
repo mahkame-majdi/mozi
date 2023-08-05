@@ -18,10 +18,9 @@
 }
 .content-slider {
     position: relative;
-    top: 0;
-    left: 0;
-    /* padding-bottom: 250px;
-    padding-top: 50px; */
+    top: 0px;
+    left: 0px;
+    min-height: 350px;
 }
 .genre-content {
     visibility: hidden;
@@ -29,10 +28,17 @@
     top: 0;
     left: 0;
     opacity: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .genre-content.active {
     visibility: visible;
     opacity: 1;
+}
+@media all and (max-width: 1100px) {
+    .content-slider {
+        min-height: 550px;
+    }
 }
 @media all and (max-width: 950px) {
     .explore .explore-wraper .buttons li {
@@ -40,3 +46,21 @@
     padding: 10px;
   }
 } 
+@media all and (max-width: 600px) {
+    .content-slider {
+        min-height: 980px;
+    }
+}
+@media all and (max-width: 400px) {
+    .content-slider {
+        min-height: 2900px;
+    }
+    .genre-content {
+        padding: 20px;
+    }
+}
+@media all and (max-width: 300px) {
+    .content-slider {
+        min-height: 1900px;
+    }
+}

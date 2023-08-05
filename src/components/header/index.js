@@ -1,5 +1,6 @@
 import './style.css';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header () {
     useEffect(() => {
@@ -22,7 +23,7 @@ export default function Header () {
                                 <span></span>
                                 <span></span>
                             </div>
-                        <img src='/assets/images/logo.png'/>     
+                        <Link to= {'/'}><img src='/assets/images/logo.png'/> </Link>    
                     </div>
                     <div className="actions">
                         <button className="main-button-gradient-font">sign in</button>
