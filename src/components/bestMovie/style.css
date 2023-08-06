@@ -8,6 +8,7 @@
     min-height: 400px;
     z-index: 1;
     background-color: #000;
+    overflow: hidden;
 }
 .best-movie::after{
     position: absolute;
