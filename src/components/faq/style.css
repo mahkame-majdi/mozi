@@ -89,13 +89,6 @@
        width: 100%;
        padding: 20px;
     }
-}
-@media all and (max-width: 550px) {
-    .faq-box .faq-style .faq-description h1{
-        overflow: hidden;
-        text-overflow: ellipsis; 
-        font-size: 2.4rem;
-    }
     .faq-box .faq-style .faq{
         transform: translateX(0);
         opacity: 1;
@@ -103,5 +96,12 @@
     .faq-box .faq-style .faq-description{
         transform: translateX(0);
         opacity: 1;
+    }
+}
+@media all and (max-width: 550px) {
+    .faq-box .faq-style .faq-description h1{
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        font-size: 2.4rem;
     }
 }

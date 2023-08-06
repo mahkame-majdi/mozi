@@ -62,7 +62,7 @@ export default function Footer(){
             </div>
             <div className='column column-style about-mozi-column'>
               <h3>about mozi</h3>
-              <Link to='/about-us'><p>about us</p></Link>
+              <Link to={'/about-us'}><p>about us</p></Link>
               <a href="#"><p>careers</p></a>
               <a href="#"><p>news & articles</p></a>
               <a href="#"><p>legal notices</p></a>

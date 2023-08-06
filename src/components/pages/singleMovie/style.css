@@ -37,9 +37,13 @@
     Transition: all ease-in 1s;
     opacity: 0;
 }
+.movie .movie-data .data-box {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
 .movie .movie-data .data-box p{
  border: 2px solid #fff;
- display: inline;
  padding: 5px;
  margin-right: 10px;
  border-radius: 5px;

@@ -15,7 +15,7 @@ export default function Header () {
     });
     return (
       <div className="header" id='header'>
-            <div className='container'>
+            <div className= "container">
                 <div className='header-style'>
                     <div className="menu-bar">
                             <div className="menu">
@@ -23,7 +23,7 @@ export default function Header () {
                                 <span></span>
                                 <span></span>
                             </div>
-                        <Link to= {'/'}><img src='/assets/images/logo.png'/> </Link>    
+                          <Link to= {'/'}><img src='/assets/images/logo.png'/> </Link>    
                     </div>
                     <div className="actions">
                         <button className="main-button-gradient-font">sign in</button>

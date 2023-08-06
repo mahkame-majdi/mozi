@@ -41,7 +41,7 @@ export default function NewMovies(props){
                         </li>
                     </ul>
                     {/* <Button type="primary">salam</Button> */}
-                    <Pagination onChange={changePage} defaultCurrent={movies.metadata.current_page} total={movies.metadata.total_count}/>
+                    <Pagination className='pagination' onChange={changePage} defaultCurrent={movies.metadata.current_page} total={movies.metadata.total_count} style={{color: "#fff", fontSiz: 15}}/>
                 </div>
             </div>
         </div>
